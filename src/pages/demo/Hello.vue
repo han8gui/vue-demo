@@ -9,7 +9,7 @@
 <script>
 
 export default {
-  name: 'hello',
+  name: 'DemoHello',
   data () {
     return {
       message: '页面加载于 ' + new Date().toLocaleString()
