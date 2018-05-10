@@ -2,15 +2,15 @@
   <div class="hello">
     <h1 v-html="title"></h1>
     <input v-model="newItem" @keyup.enter="addNew">
-        <ul v-for="item in items" v-on:click="doThis(item)">
+        <ul v-for="item in items" v-on:click="doThis(item)" v-if="!item.isFinished">
           {{ item.label }}
         </ul>
-</div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'TodoList',
   data () {
     return {
       title: 'Todolist',
@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     doThis: function (item) {
-      console.log(item)
+      item.isFinished = !item.isFinished
     },
     addNew: function () {
       this.items.push({

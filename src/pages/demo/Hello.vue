@@ -1,13 +1,12 @@
 <template>
   <div id="app-2">
     <span v-bind:title="message">
-      鼠标悬停几秒钟查看此处动态绑定的提示信息！
+      Hello
     </span>
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'DemoHello',
   data () {
